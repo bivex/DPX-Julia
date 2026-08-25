@@ -36,6 +36,8 @@ class NativeJuliaParserAdapter(ParserPort):
         r"^\s*(?:\((?P<callable_receiver>[^)]+)\)\s*)?(?:(?P<name>[A-Za-z0-9_.!]+)\s*)?\((?P<params>[^)]*)\)(?:\s*::\s*(?P<return_type>[A-Za-z0-9_{},.]+))?\s*=\s*(?P<body>.+)$"
     )
 
+    BRANCH_KEYWORDS = re.compile(r"\b(if|elseif|for|while|catch)\b|&&|\|\||\?[^:]+:\s*")
+    FIELD_EXCLUDE_KEYWORDS = {"function", "end", "mutable", "struct", "if", "for", "while", "return", "begin", "quote"}
     BLOCK_OPENERS = re.compile(r"\b(if|for|while|let|try|begin|quote|function|macro|struct)\b")
     BLOCK_CLOSERS = re.compile(r"\bend\b")
 
@@ -140,7 +142,8 @@ class NativeJuliaParserAdapter(ParserPort):
                     continue
 
                 field_m = self.FIELD_PATTERN.match(trimmed)
-                if field_m and not any(kw in trimmed for kw in ("function", "end", "new(", "if", "for")):
+                first_word = trimmed.split()[0] if trimmed.split() else ""
+                if field_m and first_word not in self.FIELD_EXCLUDE_KEYWORDS and not trimmed.startswith("new("):
                     f_name = field_m.group("name")
                     f_type = (field_m.group("type") or "Any").strip()
                     f_const = bool(field_m.group("const"))

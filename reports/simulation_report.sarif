@@ -1,0 +1,377 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "DPX-Julia",
+          "informationUri": "https://github.com/bivex/DPX-Julia",
+          "version": "0.1.0"
+        }
+      },
+      "results": [
+        {
+          "ruleId": "holy_traits_dispatch",
+          "level": "note",
+          "message": {
+            "text": "Compile-time trait dispatch over singleton trait types enabling orthogonal interface specialization."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 5,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "holy_traits_dispatch",
+          "level": "note",
+          "message": {
+            "text": "Compile-time trait dispatch over singleton trait types enabling orthogonal interface specialization."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 9,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "parametric_type_specialization",
+          "level": "note",
+          "message": {
+            "text": "Type parameterization ensuring concrete memory layout, SIMD vectorization, and zero runtime overhead."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "multiple_dispatch_polymorphism",
+          "level": "note",
+          "message": {
+            "text": "Multi-argument dynamic dispatch resolving specialized method bodies based on all operand types."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "multiple_dispatch_polymorphism",
+          "level": "note",
+          "message": {
+            "text": "Multi-argument dynamic dispatch resolving specialized method bodies based on all operand types."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "outer_constructor_dispatch",
+          "level": "note",
+          "message": {
+            "text": "Polymorphic constructors defined outside struct definition specializing instantiation protocols."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "task_async_coroutine",
+          "level": "note",
+          "message": {
+            "text": "Lightweight cooperative green threads yielding cooperatively without blocking the OS thread."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "channel_csp_pipeline",
+          "level": "note",
+          "message": {
+            "text": "Thread-safe communicating sequential processes pipeline passing messages between tasks."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "threads_parallel_loop",
+          "level": "note",
+          "message": {
+            "text": "Work-stealing shared-memory parallel computing over thread pools."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "in_place_mutating_convention",
+          "level": "note",
+          "message": {
+            "text": "Idiomatic Julia mutation updating the first argument in-place to avoid temporary heap allocations."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl"
+                },
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "callable_struct_functor",
+          "level": "note",
+          "message": {
+            "text": "Struct instance acting as an invokable function encapsulating parameters or precomputed state."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl"
+                },
+                "region": {
+                  "startLine": 11,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "singleton_immutable_instance",
+          "level": "note",
+          "message": {
+            "text": "Singleton instance represented as zero-field immutable struct or constant reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 6,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "singleton_immutable_instance",
+          "level": "note",
+          "message": {
+            "text": "Singleton instance represented as zero-field immutable struct or constant reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 7,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "singleton_immutable_instance",
+          "level": "note",
+          "message": {
+            "text": "Singleton instance represented as zero-field immutable struct or constant reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "singleton_immutable_instance",
+          "level": "note",
+          "message": {
+            "text": "Singleton instance represented as zero-field immutable struct or constant reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 19,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "singleton_immutable_instance",
+          "level": "note",
+          "message": {
+            "text": "Singleton instance represented as zero-field immutable struct or constant reference."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 20,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "builder_fluent_struct",
+          "level": "note",
+          "message": {
+            "text": "Step-by-step struct constructor chaining parameters prior to final instantiation."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl"
+                },
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "state_abstract_type_fsm",
+          "level": "note",
+          "message": {
+            "text": "Finite state machine where state transitions dispatch over an abstract state type hierarchy."
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl"
+                },
+                "region": {
+                  "startLine": 17,
+                  "startColumn": 1
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,541 @@
+{
+  "project_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation",
+  "scanned_files_count": 3,
+  "total_detections_count": 18,
+  "elapsed_seconds": 0.0009762080007931218,
+  "summary_by_category": {
+    "julia_idiomatic": 3,
+    "multiple_dispatch": 3,
+    "concurrency_parallelism": 3,
+    "scientific_performance": 2,
+    "creational": 6,
+    "structural": 0,
+    "behavioral": 1,
+    "resilience": 0,
+    "principle": 0
+  },
+  "detections": [
+    {
+      "pattern_type": "holy_traits_dispatch",
+      "pattern_category": "julia_idiomatic",
+      "target_name": "IntegrationTrait",
+      "target_kind": "abstract_trait",
+      "confidence": {
+        "score": 0.95,
+        "percentage": "95%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 5,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_HOLY_TRAITS",
+          "description": "Abstract trait hierarchy 'IntegrationTrait' enables zero-cost compile-time Holy Traits dispatch",
+          "weight": 0.95,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 5,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "holy_traits_dispatch",
+      "pattern_category": "julia_idiomatic",
+      "target_name": "integration_trait",
+      "target_kind": "trait_function",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 9,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_HOLY_TRAITS_DISPATCHER",
+          "description": "Function 'integration_trait' implements Holy Trait mapping for trait-based method dispatch",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 9,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "parametric_type_specialization",
+      "pattern_category": "julia_idiomatic",
+      "target_name": "Particle",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.95,
+        "percentage": "95%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 11,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_PARAMETRIC_SPECIALIZATION",
+          "description": "Struct 'Particle{T<:Real}' specializes concrete memory layout across type parameters",
+          "weight": 0.95,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 11,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "multiple_dispatch_polymorphism",
+      "pattern_category": "multiple_dispatch",
+      "target_name": "step_simulation!",
+      "target_kind": "function",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_MULTIPLE_DISPATCH",
+          "description": "Function 'step_simulation!' performs multi-argument dynamic multiple dispatch over (p::Particle{T}, dt::T)",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "multiple_dispatch_polymorphism",
+      "pattern_category": "multiple_dispatch",
+      "target_name": "run_parallel_simulation",
+      "target_kind": "function",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_MULTIPLE_DISPATCH",
+          "description": "Function 'run_parallel_simulation' performs multi-argument dynamic multiple dispatch over (particles::Vector{Particle{Float64}}, builder::EngineBuilder)",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "outer_constructor_dispatch",
+      "pattern_category": "multiple_dispatch",
+      "target_name": "PotentialFunctor",
+      "target_kind": "outer_constructor",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+        "line": 11,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "JULIA_OUTER_CONSTRUCTOR",
+          "description": "Function 'PotentialFunctor' acts as polymorphic Outer Constructor specializing struct instantiation",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+            "line": 11,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "task_async_coroutine",
+      "pattern_category": "concurrency_parallelism",
+      "target_name": "run_parallel_simulation",
+      "target_kind": "function",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CONCURRENCY_TASK_ASYNC",
+          "description": "Function 'run_parallel_simulation' coordinates cooperative asynchronous tasks via @async / @sync",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "channel_csp_pipeline",
+      "pattern_category": "concurrency_parallelism",
+      "target_name": "run_parallel_simulation",
+      "target_kind": "function",
+      "confidence": {
+        "score": 0.92,
+        "percentage": "92%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CONCURRENCY_CHANNEL_CSP",
+          "description": "Function 'run_parallel_simulation' implements CSP message-passing pipeline via Channel{T}",
+          "weight": 0.92,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "threads_parallel_loop",
+      "pattern_category": "concurrency_parallelism",
+      "target_name": "run_parallel_simulation",
+      "target_kind": "function",
+      "confidence": {
+        "score": 0.95,
+        "percentage": "95%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CONCURRENCY_THREADS_PARALLEL",
+          "description": "Function 'run_parallel_simulation' executes multithreaded parallel loop via Threads.@threads",
+          "weight": 0.95,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "in_place_mutating_convention",
+      "pattern_category": "scientific_performance",
+      "target_name": "step_simulation!",
+      "target_kind": "mutating_function",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+        "line": 13,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "SCIENTIFIC_IN_PLACE_MUTATION",
+          "description": "Function 'step_simulation!' follows Julia mutating convention modifying arguments in-place to avoid allocations",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+            "line": 13,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "callable_struct_functor",
+      "pattern_category": "scientific_performance",
+      "target_name": "PotentialFunctor",
+      "target_kind": "callable_struct",
+      "confidence": {
+        "score": 0.95,
+        "percentage": "95%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+        "line": 11,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "SCIENTIFIC_CALLABLE_STRUCT_FUNCTOR",
+          "description": "Callable struct functor 'PotentialFunctor' encapsulates state and behaves as an invocable function",
+          "weight": 0.95,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/Solvers.jl",
+            "line": 11,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "singleton_immutable_instance",
+      "pattern_category": "creational",
+      "target_name": "RK4Trait",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.85,
+        "percentage": "85%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 6,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_SINGLETON_STRUCT",
+          "description": "Zero-field immutable struct 'RK4Trait' serves as a unique type-level Singleton instance",
+          "weight": 0.85,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 6,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "singleton_immutable_instance",
+      "pattern_category": "creational",
+      "target_name": "EulerTrait",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.85,
+        "percentage": "85%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 7,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_SINGLETON_STRUCT",
+          "description": "Zero-field immutable struct 'EulerTrait' serves as a unique type-level Singleton instance",
+          "weight": 0.85,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 7,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "singleton_immutable_instance",
+      "pattern_category": "creational",
+      "target_name": "RunningState",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.85,
+        "percentage": "85%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 18,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_SINGLETON_STRUCT",
+          "description": "Zero-field immutable struct 'RunningState' serves as a unique type-level Singleton instance",
+          "weight": 0.85,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 18,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "singleton_immutable_instance",
+      "pattern_category": "creational",
+      "target_name": "PausedState",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.85,
+        "percentage": "85%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 19,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_SINGLETON_STRUCT",
+          "description": "Zero-field immutable struct 'PausedState' serves as a unique type-level Singleton instance",
+          "weight": 0.85,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 19,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "singleton_immutable_instance",
+      "pattern_category": "creational",
+      "target_name": "TerminatedState",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.85,
+        "percentage": "85%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 20,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_SINGLETON_STRUCT",
+          "description": "Zero-field immutable struct 'TerminatedState' serves as a unique type-level Singleton instance",
+          "weight": 0.85,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 20,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "builder_fluent_struct",
+      "pattern_category": "creational",
+      "target_name": "EngineBuilder",
+      "target_kind": "struct",
+      "confidence": {
+        "score": 0.9,
+        "percentage": "90%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+        "line": 8,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "CREATIONAL_BUILDER_STRUCT",
+          "description": "Struct 'EngineBuilder' implements Builder pattern accumulating configuration parameters",
+          "weight": 0.9,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/SimulationEngine.jl",
+            "line": 8,
+            "column": 1
+          }
+        }
+      ]
+    },
+    {
+      "pattern_type": "state_abstract_type_fsm",
+      "pattern_category": "behavioral",
+      "target_name": "SimulationState",
+      "target_kind": "abstract_state",
+      "confidence": {
+        "score": 0.92,
+        "percentage": "92%",
+        "level": "VERY_HIGH"
+      },
+      "primary_location": {
+        "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+        "line": 17,
+        "column": 1
+      },
+      "related_locations": [],
+      "evidences": [
+        {
+          "rule_code": "BEHAVIORAL_STATE_ABSTRACT_FSM",
+          "description": "Abstract state hierarchy 'SimulationState' models Finite State Machine (FSM) via multiple dispatch transitions",
+          "weight": 0.92,
+          "location": {
+            "file_path": "/Volumes/External/Code/DPX-Julia/examples/scientific_simulation/PhysicsTypes.jl",
+            "line": 17,
+            "column": 1
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -17,7 +17,7 @@ from pattern_detector.domain.value_objects import (
 class TaskAsyncCoroutineRule(BaseRule):
     """Detects Julia lightweight asynchronous tasks and coroutines (`@async`, `@sync`, `schedule`)."""
 
-    ASYNC_PATTERN = re.compile(r"\b(@async|@sync|schedule\s*\(|Task\s*\()")
+    ASYNC_PATTERN = re.compile(r"(@async\b|@sync\b|schedule\s*\(|Task\s*\()")
 
     def evaluate(self, model: CodeModel) -> list[Detection]:
         detections: list[Detection] = []

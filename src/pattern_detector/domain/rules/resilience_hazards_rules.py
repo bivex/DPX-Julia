@@ -55,7 +55,7 @@ class TypeInstabilityNonConcreteFieldRule(BaseRule):
 class UntypedGlobalMutationRule(BaseRule):
     """Detects mutation of non-const global variables in functions."""
 
-    GLOBAL_VAR_PATTERN = re.compile(r"^\s*global\s+([A-Za-z0-9_]+)\s*=")
+    GLOBAL_VAR_PATTERN = re.compile(r"\bglobal\s+([A-Za-z0-9_]+)\s*=")
 
     def evaluate(self, model: CodeModel) -> list[Detection]:
         detections: list[Detection] = []

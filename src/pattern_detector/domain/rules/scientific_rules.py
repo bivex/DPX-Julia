@@ -17,7 +17,7 @@ from pattern_detector.domain.value_objects import (
 class ZeroAllocationViewRule(BaseRule):
     """Detects zero-allocation array views (`@views`, `view(A, ...)`)."""
 
-    VIEW_PATTERN = re.compile(r"\b(@views|view\s*\()")
+    VIEW_PATTERN = re.compile(r"(@views\b|\bview\s*\()")
 
     def evaluate(self, model: CodeModel) -> list[Detection]:
         detections: list[Detection] = []
